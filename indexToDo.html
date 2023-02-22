@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="assets/styles/toDo.css" />
+  </head>
+  <body>
+    <div class="row m-3">
+      <div id="toDoList" class="list-group col-6"></div>
+
+      <div id="input" class="col-6">
+        <div class="m-2">
+          <label for="day"> day:</label>
+          <input type="text" name="day" id="day" class="input-group" />
+        </div>
+        <div class="m-2">
+          <label for="task">task:</label>
+          <input type="text" name="task" id="task" class="input-group" />
+        </div>
+        <input
+          type="submit"
+          id="submit-button"
+          value="add to do"
+          disabled="disabled"
+          class="btn btn-primary m-2"
+        />
+      </div>
+    </div>
+    <script src="assets/js/toDo.js"></script>
+  </body>
+</html>
