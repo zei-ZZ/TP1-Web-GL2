@@ -16,16 +16,16 @@ const list = document.querySelector("#toDoList");
 // });
 
 day.addEventListener("input", (e) => {
-  if (e.target.value && task.value) enableButton(submitButton);
+  if (e.target.value.trim() && task.value.trim()) enableButton(submitButton);
   else disableButton(submitButton);
 });
 task.addEventListener("input", (e) => {
-  if (e.target.value && day.value) enableButton(submitButton);
+  if (e.target.value.trim() && day.value.trim()) enableButton(submitButton);
   else disableButton(submitButton);
 });
 submitButton.addEventListener("click", () => {
-  let a = day.value;
-  let b = task.value;
+  let a = day.value.trim();
+  let b = task.value.trim();
   generateToDo(a, b, list);
   task.value = "";
   day.value = "";
