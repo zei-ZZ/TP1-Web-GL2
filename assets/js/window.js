@@ -4,16 +4,19 @@ let guess;
 const target = Math.floor(Math.random() * 11);
 while (i < tries) {
   console.log(target);
-  guess = prompt(
-    `guess the number! \n you have ${
-      tries - i
-    } tries left in your pockety pocket`
-  );
+  guess = prompt(`guess the number! \n you have ${tries - i} tries left`);
   if (guess == target) {
     alert(`congrats you found the random integer, it's ${target}`);
     break;
+  } else if (guess < target) {
+    alert(
+      "the number you're trying to guess is larger!!! try again if you can"
+    );
+    i++;
   } else {
-    alert("you were wrong! try again if you can");
+    alert(
+      "the number you're trying to guess is smaller!!! try again if you can"
+    );
     i++;
   }
 }

@@ -1,4 +1,4 @@
-const submitButton = document.getElementById("submit-button");
+const submitButton = document.querySelector("#submit-button");
 const day = document.querySelector("#day");
 const task = document.querySelector("#task");
 const list = document.querySelector("#toDoList");
@@ -14,6 +14,7 @@ const list = document.querySelector("#toDoList");
 //     else disableButton(submitButton);
 //   });
 // });
+
 day.addEventListener("input", (e) => {
   if (e.target.value && task.value) enableButton(submitButton);
   else disableButton(submitButton);
